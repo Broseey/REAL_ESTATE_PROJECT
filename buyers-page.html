@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Houses</title>
+    <style>
+        /* Global styles for the page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F4F5F7;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header styles */
+        .header {
+            background-color: #1E3A8A;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        /* House card styles */
+        .house-card {
+            background-color: white;
+            margin: 1rem;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .house-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* House details styles */
+        .house-details {
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        /* Filter styles */
+        .filter {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        /* Responsive layout styles */
+        @media (min-width: 768px) {
+            .house-card {
+                flex-direction: row;
+            }
+
+            .house-image {
+                flex: 1;
+                margin-right: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>Available Houses for Sale</h1>
+    </div>
+
+    <!-- Filter -->
+    <div class="filter">
+        <label for="bedrooms">Filter by Bedrooms:</label>
+        <select id="bedrooms">
+            <option value="all">All</option>
+            <option value="2">2 Bedrooms</option>
+            <option value="3">3 Bedrooms</option>
+            <option value="4">4 Bedrooms</option>
+            <!-- Add more options as needed -->
+        </select>
+    </div>
+
+    <!-- House cards -->
+    
+    <div class="house-card" data-bedrooms="3">
+        <img src="house1.jpg" alt="House 1" class="house-image">
+        <div class="house-details">
+            <h2>House 1</h2>
+            <p>Price: $250,000</p>
+            <p>Bedrooms: 3</p>
+            <p>Bathrooms: 2</p>
+            <p>Area: 1500 sqft</p>
+            <button>Contact Agent</button>
+        </div>
+    </div>
+
+    <div class="house-card" data-bedrooms="4">
+        <img src="house2.jpg" alt="House 2" class="house-image">
+        <div class="house-details">
+            <h2>House 2</h2>
+            <p>Price: $350,000</p>
+            <p>Bedrooms: 4</p>
+            <p>Bathrooms: 3</p>
+            <p>Area: 2200 sqft</p>
+            <button>Contact Agent</button>
+        </div>
+    </div>
+
+    <!-- Add more house cards as needed -->
+
+    <script>
+        const filterSelect = document.getElementById('bedrooms');
+        const houseCards = document.querySelectorAll('.house-card');
+
+        filterSelect.addEventListener('change', filterHouses);
+
+        function filterHouses() {
+            const selectedBedrooms = filterSelect.value;
+            
+            houseCards.forEach(card => {
+                const cardBedrooms = card.getAttribute('data-bedrooms');
+                if (selectedBedrooms === 'all' || selectedBedrooms === cardBedrooms) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

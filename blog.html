@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Real Estate Agency</title>
+  <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    /* Additional styles for the Blog page */
+    .blog-container {
+      background-color: #f9f9f9;
+      padding: 4rem;
+    }
+    .blog-post {
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    .blog-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .blog-date {
+      color: #888888;
+      font-size: 0.875rem;
+    }
+    .blog-content {
+      color: #333333;
+      line-height: 1.6;
+      overflow: hidden;
+      max-height: 6em; /* Adjust as needed */
+    }
+    .read-more {
+      cursor: pointer;
+      color: #0077b6;
+      font-weight: 600;
+    }
+    .expanded {
+      max-height: none;
+    }
+      .intro{
+          background: black;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display:flex;
+          justify-content:center;
+          align-items: center;
+      }
+
+      .slider{
+          background:darkslategray;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display:flex;
+          justify-content:center;
+          align-items: center;
+          transform: translateY(100%);
+      }
+
+      .intro-text h1{
+          color: rgb(227,242,255);
+          font-family: 'Heebo', sans-serif;
+          font-size: 5rem;
+      }
+
+      .hide{
+          background: black;
+          overflow: hidden;
+      }
+
+      .intro-text .hide span{
+          transform: translateY(100%);
+          display: inline-block;
+      }
+  </style>
+
+</head>
+<body>
+  <div class="intro">
+    <div class="intro-text">
+        <h1 class="hide">
+            <span class="text font-['Heebo',sans-serif]">Housing blog</span>
+        </h1>
+        <h1 class="hide">
+            <span class="text">For Everyday</span>
+        </h1>
+        <h1 class="hide">
+            <span class="text">people.</span>
+        </h1>
+    </div>
+</div>
+<div class="slider"></div>
+
+  <!-- Navigation bar -->
+  <nav class="bg-teal text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="index.html" class=" styled-font text-[2rem]">Royale</a>
+      <!-- Navigation links here -->
+    </div>
+  </nav>
+
+  <!-- Blog content -->
+  <div class="blog-container">
+    <h1 class=" heading-text text-3xl font-semibold text-center mb-6">Royale Real Estate Blog</h1>
+
+    <div class="blog-post">
+      <h2 class="blog-title">10 Tips for First-Time Homebuyers</h2>
+      <p class="blog-date">Published on August 15, 2023</p>
+      <p class="blog-content">
+        Buying your first home can be both exciting and overwhelming. In this blog post, we share essential tips for first-time homebuyers to make the process smoother and more successful...
+      </p>
+     <!-- place more content here -->
+      <p class="read-more">Read More</p>
+    </div>
+
+    <div class="blog-post">
+      <h2 class="blog-title">The Benefits of Investing in Rental Properties</h2>
+      <p class="blog-date">Published on July 30, 2023</p>
+      <p class="blog-content">
+        Investing in rental properties can provide a steady stream of passive income and long-term financial growth. Learn about the advantages of becoming a rental property investor...
+      </p>
+      <!-- Place more content here -->
+      <p class="read-more">Read More</p>
+    </div>
+    <div class="blog-post">
+      <h2 class="blog-title">The Impact of Location on Property Values"</h2>
+      <p class="blog-date">Published on August 10, 2023</p>
+      <p class="blog-content">
+        Location is the cornerstone of real estate. This blog explores how the geographical location of a property can significantly influence its value. Whether it's a bustling city center, a serene suburban neighborhood, or a scenic countryside, the location is a key factor that both buyers and investors must consider....
+      </p>
+      <!-- Place more content here -->
+      <p class="read-more">Read More</p>
+    </div>
+
+    <div class="blog-post">
+      <h2 class="blog-title">Investing in Rental Properties: Pros and Cons"</h2>
+      <p class="blog-date">Published on July 28, 2023</p>
+      <p class="blog-content">
+        Rental properties can be a lucrative investment, but they come with their own set of advantages and disadvantages. This blog takes an in-depth look at the pros and cons of investing in rental real estate, helping you make informed decisions.
+      </p>
+      <!-- Place more content here -->
+      <p class="read-more">Read More</p>
+    </div>
+    <div class="blog-post">
+      <h2 class="blog-title">Home Staging: Maximizing Your Property's Appeal"</h2>
+      <p class="blog-date">Published on August 15, 2023</p>
+      <p class="blog-content">
+        Selling a home? Learn the art of home staging, a powerful technique to make your property more appealing to potential buyers. Discover how to showcase your home's best features and create a lasting impression....
+      </p>
+     <!-- Place more content here -->
+      <p class="read-more">Read More</p>
+    </div>
+
+    <div class="blog-post">
+      <h2 class="blog-title">Understanding Mortgage Options: Fixed vs. Adjustable Rates"</h2>
+      <p class="blog-date">Published on July 28, 2023</p>
+      <p class="blog-content">
+        Explain the differences between fixed-rate and adjustable-rate mortgages, helping readers make informed decisions...
+      </p>
+      <!-- Place more content here -->
+      <p class="read-more">Read More</p>
+    </div>
+    <div class="blog-post">
+      <h2 class="blog-title">Green Real Estate: Sustainable Living and Home Investments"</h2>
+      <p class="blog-date">Published on August 15, 2023</p>
+      <p class="blog-content">
+        Choosing the right mortgage is crucial when buying a home. We break down the differences between fixed and adjustable-rate mortgages, empowering you to make a wise decision based on your financial goals and circumstances...
+      </p>
+      <!-- Place more content here -->
+      <p class="read-more">Read More</p>
+    </div>
+
+    <div class="blog-post">
+      <h2 class="blog-title">"Real Estate Market Trends for 2023"</h2>
+      <p class="blog-date">Published on July 28, 2023</p>
+      <p class="blog-content">
+        An annual update on the current state of the real estate market, including price trends and predictions...
+      </p>
+        <!-- Place more content here -->
+      <p class="read-more">Read More</p>
+    </div>
+    <div class="blog-post">
+      <h2 class="blog-title">Renovating for Resale: Which Home Improvements Pay Off"</h2>
+      <p class="blog-date">Published on August 15, 2023</p>
+      <p class="blog-content">
+        Planning to sell your home? Discover which home renovations offer the best return on investment. Learn how strategic upgrades can boost your property's resale value...
+      </p>
+        <!-- Place more content here -->     
+      <p class="read-more">Read More</p>
+    </div>
+
+    <div class="blog-post">
+      <h2 class="blog-title">The Art of Negotiating Real Estate Deals</h2>
+      <p class="blog-date">Published on July 28, 2023</p>
+      <p class="blog-content">
+        Negotiation is a critical skill in real estate. This blog equips you with expert tips and strategies for negotiating favorable terms, whether you're buying, selling, or investing in real estate...
+      </p>
+      <!-- Place more content here -->
+      <p class="read-more">Read More</p>
+    </div>
+    <!-- Add more blog posts as needed -->
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-deep-slate-gray text-light-gray py-6 mt-40">
+    <div class="max-w-[90%] mx-auto mt-10">
+      <div class="grid place-items-center grid-cols-2 md:grid-cols-3 mx-auto max-w-7xl text-center">
+        <div class="mt-10">
+          <h2 class="text-lg font-semibold mb-4">Contact Us</h2>
+          <p>123 Main Street</p>
+          <p>City, State ZIP</p>
+          <p><i class="fa fa-envelope pr-2"></i> info@example.com</p>
+          <p><i class="fa fa-phone pr-2 "></i> (123) 456-7890</p>
+
+          <div class="mt-3">
+            <!-- <h2 class="text-lg font-semibold mb-4">Follow Us</h2> -->
+            <div class="flex space-x-5 justify-center text-2xl ">
+              <a href="#" class="text-light-gray hover:text-teal">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </svg>
+              </a>
+              <a href="#" class="text-light-gray hover:text-teal">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </svg>
+              </a>
+              <a href="#" class="text-light-gray hover:text-teal">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </svg>
+              </a>              
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mt-10">
+          <h2 class="text-lg font-semibold mb-4">Quick Links</h2>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="hover:text-teal">Home</a></li>
+            <li><a href="about-us.html" class="hover:text-teal">About Us</a></li>
+            <li><a href="contact.html" class="hover:text-teal">Contact</a></li>
+            <li><a href="blog.html" class="text-light-gray hover:text-teal">Blog</a></li>
+            <li><a href="buyhouse.html" class="hover:text-teal">Properties</a></li>
+            <li><a href="#" class="hover:text-teal">Agents</a></li>
+          </ul>
+        </div>
+        
+        <div class="mt-10 col-span-1">
+          <h2 class="text-lg font-semibold mb-4">Discover listings</h2>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:pr-3 hover:text-teal">Lagos Island</a>&#8594;</li>
+            <li><a href="#" class="hover:pr-3 hover:text-teal">Lagos Mainland</a>&#8594;</li>
+            <li><a href="#" class="hover:pr-3 hover:text-teal">Abuja</a>&#8594;</li>
+            <li><a href="#" class="hover:pr-3 hover:text-teal">Ibadan</a>&#8594;</li>
+            <li><a href="#" class="hover:pr-3 hover:text-teal">Port-hacourt</a>&#8594;</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="container mx-auto mt-36 text-center text-xs">
+      <p>&copy; 2023 Real Estate Company. All rights reserved.</p>
+    </div>
+    </footer>
+</body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    const tl = gsap.timeline({defaults: {ease: "power1.out"}})
+    
+    tl.to('.text',{y:'0%', duration:1, stagger: 0.25})
+    tl.to('.slider', {y:"-100%", duration: 1.0, delay: 0.5});
+    tl.to(".intro", {y:"-100%", duration: 1 }, "-=1");
+    tl.fromTo('.heading-text',{opacity:0}, {opacity:1, duration:1,})
+    tl.fromTo('.blog-post',{y:"50%",opacity:0}, {y:"0%", opacity:1, duration:0.15, stagger: 0.3})
+</script>
+
+
+<script>
+  // JavaScript to handle "Read More" functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const readMoreButtons = document.querySelectorAll('.read-more');
+
+    readMoreButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.previousElementSibling;
+        content.classList.toggle('expanded');
+        button.textContent = content.classList.contains('expanded') ? 'Read Less' : 'Read More';
+      });
+    });
+  });
+</script>

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Real Estate Agency</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/mininavbar.css">
+  <!-- SWIPER.JS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/swiper@10.2.0/swiper-bundle.min.css" rel="stylesheet">  
+
+  <!-- FULLPAGE.JS CDN -->
+
+
+   <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+
+  <!-- PRELOADER -->
+  <link rel="stylesheet" href="css/preloader.css">
+  <script src="js/preloader.js"></script>
+
+  <!-- Login/ Sign up -->
+  <link rel="stylesheet" href="css/login-popup.css">
+  <style>
+    /* Additional styles for the About Us page */
+    .about-content {
+      border: 5px dashed teal;
+      max-width: 800px;
+      margin-left: auto;
+      text-align: center;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .team-container {
+      background-color: #f9f9f9;
+      padding: 4rem;
+      overflow: hidden;
+    }
+    .team-member {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 1.5rem;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+    }
+    .team-image {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 1px solid;
+      margin: 0 auto 1rem;
+    }
+
+    .swiper-container {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    .swiper-slide {
+      background-position:center;
+      background-size: cover;
+      width: 300px;
+      height: 400px;
+    }
+
+    /* Responsive styles */
+    @media (min-width: 640px) {
+      .team-member {
+        margin-right: 1rem;
+      }
+    }
+
+    .faq-container {
+      background-color: #f9f9f9;
+      padding: 4rem;
+    }
+    .faq-question {
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .faq-answer {
+      
+      margin-top: 1rem;
+    }
+
+  </style>
+</head>
+<body class="bg-light-gray h-screen">
+  <!-- Word loader -->
+  <div class="word-loader" >  
+    <div class="word">Loading... </div>
+  </div>
+
+    <!-- Navigation -->
+    <nav class="bg-teal text-charcoal p-3 justify-center items-center hidden md:flex">
+    
+      <div class="container max-w-7xl mx-auto flex justify-between items-center md:justify-between">
+         <div class="flex space-x-4 md:hidden">
+          <button id="menuButton" class="focus:outline-none">
+              <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 5h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 5h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
+              </svg>
+          </button>
+        </div>
+  
+        <a href="index.html" class="text-3xl logo-color2  styled-font flex"><img width="30" height="64" src="https://img.icons8.com/hatch/64/000000/exterior.png" alt="exterior"/><span class="styled-font logo-color">R</span>oyale</a>
+  
+        
+        <!-- <div class="flex space-x-4 md:hidden">
+          <button id="loginButton" class="focus:outline-none">
+              <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg>
+          </button>
+        </div> -->
+  
+      
+        <ul class="sidebar absolute left-0 top-0 md:static hidden md:flex items-center space-x-4 font-medium text-center w-0 md:w-fit h-full md:h-fit">
+          
+          <li class="md:hidden"><a href="#" class="text-3xl logo-color2  styled-font flex"><img width="30" height="64" src="https://img.icons8.com/hatch/64/000000/exterior.png" alt="exterior"/><span class="styled-font logo-color">R</span>oyale</a>
+  
+          <button id="closeMenuButton" class="absolute right-0 top-0"><svg class="fill-current h-8" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+          </button>
+  
+          </li>
+          <li><a href="buyhouse.html" class="nav-link hover:text-deep-slate-gray">Buy</a></li>
+          <li><a href="sell.html" class="nav-link hover:text-deep-slate-gray">Sell</a></li>
+          <li><a href="rent.html" class="nav-link hover:text-deep-slate-gray">Rent</a></li>
+          <li><a href="buyhouse.html" class="nav-link hover:text-deep-slate-gray">Properties</a></li>
+          <li><a href="blog.html" class="nav-link hover:text-deep-slate-gray">Blog</a></li>
+          <li><a href="about-us.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+    
+  
+        <ul class="sidebar absolute md:static hidden md:flex">
+          <li class=""><a href="" class="underline hover:opacity-80">Advertise</a></li>
+       </ul>
+  
+        <ul class="hidden md:flex space-x-4">
+          <li><a href="#" onclick="showLogin(this)" class="nav-link">Log in</a></li>
+          <li><a href="#" onclick="showLogin(this)" class="bg-white text-black p-2 px-4 font-medium rounded-2xl hover:opacity-95">Sign Up</a></li>
+        </ul>
+  
+        
+      </div>
+    </nav>
+    <!-- NAV FOR SMALL DEVICE -->
+    <div class="relative w-full p-3 h-fit bg-teal md:hidden flex justify-between items-center flex-row">
+      <div class="menubtn">
+        <svg class="text-[1.2rem]" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+      </div>
+  
+      <a href="index.html" class="text-3xl logo-color2  styled-font flex"><img width="30" height="64" src="https://img.icons8.com/hatch/64/000000/exterior.png" alt="exterior"/><span class="styled-font logo-color">R</span>oyale</a>
+  
+      <div><a href="#" onclick="showLogin(this)"><svg class="text-[1.2rem]" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM504 312V248H440c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V136c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H552v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></a>
+      </div>
+      <section class="smallernav md:hidden z-10 fixed">
+        <h2 class='styled-font'>Royale</h2>
+        <div class="close">
+          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+        </div>
+        <ul class="text-center">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Properties</a></li>
+          <li><a href="buyhouse.html">Buy</a></li>
+          <li><a href="about-us.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </section>
+  
+    
+  
+      
+    </div>
+
+  <div class="max-w-[90%] mx-auto">
+    <h1 class=" inline-block underline border-dotted border-teal-900 border mt-10 sm:mt-20 text-2xl font-black sm:text-5xl mb-10">ABOUT ROYALE</h1>
+    <div class="seconary-nav h-fit border-t-2 border-b-2 w-[80%] mx-auto">
+      <ul class=" flex space-x-4 justify-around items-center">
+        <li class="cursor-pointer hover:text-deep-slate-gray"><a href="#who-we-are" class="active:text-sandy-brown">Who we Are</a></li>
+        <li class="cursor-pointer hover:text-deep-slate-gray"> <a href="#our-team" class="active:text-sandy-brown">Our Team</li></a>
+        <li class="cursor-pointer hover:text-deep-slate-gray"><a href="#Faq" class="active:text-sandy-brown">Faq</li></a>
+      </ul>
+    </div>
+  </div>
+
+  <!-- About Us content -->
+  <div class="w-[100%] mx-auto mb-20">
+
+    <div id="who-we-are" class=" relative mt-16 lg:flex xl:block w-[90%] h-auto mx-auto ">
+      <div class="xl:w-3/5 lg:w-3/5 hidden md:block lg:absolute xl:relative ">
+        <img src="/build/img/blackagent-selling-house.webp" alt="">
+      </div>
+      <div class="about-content lg:relative lg:mt-56 xl:mt-10 xl:absolute lg:top-0 lg:right-0 text-justify lg:w-[70%] xl:w-[800px]">
+        <h1 class="md:text-3xl text-xl font-extrabold mb-5 text-center ">We recommend the most luxurious and comfortable Houses that makes One eager to make It One's Home.</h1>
+        <p class="text-gray-600  alternate-body  sm:p-2">Welcome to Real Estate, your trusted partner in finding the perfect home. With years of experience in the industry, we specialize in connecting buyers and sellers, helping them navigate the exciting journey of real estate transactions.</p>
+        <p class="text-gray-600 alternate-body sm:p-2">Our mission is to make the process of buying or selling a property as smooth and enjoyable as possible. We understand that each client has unique needs and preferences, which is why we take a personalized approach to every interaction.</p>
+        <div class="text-center w-full my-2 sm:hidden"><img class="w-fit inline-block center" src="/build/img/home-agreement.webp" alt=""></div>
+        <p class="text-gray-600 alternate-body sm:p-2">Our team of dedicated professionals is committed to providing expert guidance, up-to-date market insights, and exceptional customer service. Whether you're a first-time homebuyer, an investor, or a seasoned seller, we're here to support you at every step.</p>
+        <p class="text-gray-600 alternate-body sm:p-2">Thank you for considering Real Estate as your partner in real estate endeavors. We look forward to helping you achieve your property goals and making your real estate dreams a reality.</p>
+        <div class="text-center w-full my-2 hidden sm:block md:hidden"><img class="w-fit inline-block center" src="/build/img/home-agreement.webp" alt=""></div>
+
+      </div>
+    </div>
+
+  
+    <div id="our-team" class="mt-10">
+      <div class="team-container swiper-container mt-10">
+         <h1 class="text-3xl font-semibold text-center mb-6 text-teal">Meet Our Team</h1>
+        <div class="swiper-wrapper">
+          <!-- Team member 1 -->
+          <div class="swiper-slide team-member">
+            <img src="/build/img/Team/img1.jpg" alt="Team Member 1" class="team-image">
+            <h2 class="text-xl font-semibold mb-2">John Doe</h2>
+            <p class="text-gray-600 mb-2">Real Estate Agent</p>
+            <p class="text-gray-600 mb-4">With over a decade of experience in the industry, John is a skilled real estate agent...</p>
+          </div>
+
+          <!-- Team member 2 -->
+          <div class="swiper-slide team-member">
+            <img src="/build/img/Team/staff-1.jpg" alt="Team Member 2" class="team-image">
+            <h2 class="text-xl font-semibold mb-2">Jane Smith</h2>
+            <p class="text-gray-600 mb-2">Property Manager</p>
+            <p class="text-gray-600 mb-4">Jane oversees property management operations, ensuring that properties are well-maintained...</p>
+          </div>
+          <!-- Team member 3 -->
+          <div class="swiper-slide team-member">
+            <img src="/build/img/Team/staff-3.webp" alt="Team Member 3" class="team-image">
+            <h2 class="text-xl font-semibold mb-2">kenneth Copeland</h2>
+            <p class="text-gray-600 mb-2">Assistant Property Manager</p>
+            <p class="text-gray-600 mb-4">Copeland also oversees property management operations, ensuring that properties are well-maintained...</p>
+          </div>
+          <!-- Team member 4 -->
+          <div class="swiper-slide team-member">
+            <img src="/build/img/Team/staff-2.jpg" alt="Team Member 4" class="team-image">
+            <h2 class="text-xl font-semibold mb-2">Emily Turner</h2>
+            <p class="text-gray-600 mb-2">Marketing Specialist</p>
+            <p class="text-gray-600 mb-4">Emily is our dedicated marketing specialist who takes charge of promoting properties and attracting potential buyers...</p>
+          </div>
+
+          <!-- Team member 5 -->
+          <div class="swiper-slide team-member">
+            <img src="/build/img/Team/img3.jpg" alt="Team Member 5" class="team-image">
+            <h2 class="text-xl font-semibold mb-2">Alex Patel</h2>
+            <p class="text-gray-600 mb-2">Investment Advisor</p>
+            <p class="text-gray-600 mb-4">As our seasoned investment advisor, Alex specializes in helping clients make informed real estate investment decisions...</p>    
+          </div>
+          <!-- Team member 6 -->
+          <div class="swiper-slide team-member">
+            <img src="/build/img/Team/staff-4.webp" alt="Team Member 6" class="team-image">
+            <h2 class="text-xl font-semibold mb-2">Lisa Williams</h2>
+            <p class="text-gray-600 mb-2">Customer Relations Manager</p>
+            <p class="text-gray-600 mb-4">Lisa plays a crucial role in maintaining strong relationships with our clients. She ensures that every client's journey...</p>
+        </div>
+          <!-- Team member 7 -->
+          <div class="swiper-slide team-member">
+            <img src="/build/img/Team/img5.jpg" alt="Team Member 7" class="team-image">
+            <h2 class="text-xl font-semibold mb-2">Mark Thompson</h2>
+            <p class="text-gray-600 mb-2">Home Staging Consultant</p>
+            <p class="text-gray-600 mb-4">Mark is our home staging expert who specializes in enhancing the visual appeal of properties for sale...</p>    
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="w-[80%] mx-auto mt-10">
+      <h2 class="text-4xl font-black text-center mb-10">Explore more about Royale Real Estate Agency </h2>
+      <div class="flex md:flex-row flex-col justify-center md:justify-around items-center">
+        <div class=" space-y-4 ">
+          <p class="text-xl">&#8226;Visit our <a href="/build/blog.html" target="_blank" class="text-teal font-black">Blog</a></p>
+          <p class="text-2xl">&#8226;<a href="contact.html" class=" text-teal underline">Reach out</a> to us</p>
+          <h4 class="text-2xl inline-block">&#8226;Do you need Royale?<h6 class="pl-2 text-5xl inline-block"><span class="hover:mr-2">Find out</span> <span class=" md:inline hidden"> &#8594;</span> <span class="md:hidden">	&#8595;</span></h6></h4>
+          
+        </div>
+        <div class="mt-4 md:mt-auto relative w-[300px] h-[300px] sm:h-[400px] sm:w-[500px]  md:h-[400px] md:w-[600px]">
+          <iframe class="w-full h-full absolute rounded-lg border-solid border-4 border-black" src="https://www.youtube.com/embed/Bk6e-LA6fOY" title="Do You Need A Real Estate Agent (or Realtor) To Buy A House?" frameborder="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen gesture="media"></iframe>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+
+    <!-- FAQ content -->
+    <div class="faq-container" id="Faq">
+      <h1 class="text-3xl font-semibold text-center mb-6">Frequently Asked Questions</h1>
+      <div class="space-y-4">
+        <!-- FAQ 1 -->
+        <div class="faq-question" onclick="toggleAnswer(this)">How do I search for properties?</div>
+        <div class="faq-answer hidden">
+          You can search for properties by using our advanced search feature. Simply enter your criteria such as location, price range, and property type to find the perfect match.
+        </div>
+  
+        <!-- FAQ 2 -->
+        <div class="faq-question" onclick="toggleAnswer(this)">What is the process of selling a property?</div>
+        <div class="faq-answer hidden">
+          Selling a property involves several steps, including property evaluation, listing creation, marketing, negotiation, and closing. Our experienced agents will guide you through each step of the process.
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-question" onclick="toggleAnswer(this)">How can I get a home loan pre-approval?</div>
+        <div class="faq-answer hidden">
+          To get a home loan pre-approval, you'll need to provide your financial information to a lender. This includes details about your income, credit history, and debt. Once approved, you'll have a better understanding of your budget when shopping for a home.
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-question" onclick="toggleAnswer(this)">Do you offer property management services?</div>
+        <div class="faq-answer hidden">
+          Yes, we offer comprehensive property management services for landlords. Our services include tenant screening, rent collection, property maintenance, and more. We ensure your investment property is well-managed and hassle-free.
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-question" onclick="toggleAnswer(this)">Can you help with relocation services?</div>
+        <div class="faq-answer hidden">
+          Absolutely! Our relocation services are designed to assist you when moving to a new area. We can help you find the right neighborhood, navigate the local real estate market, and make a smooth transition to your new home.
+        </div>
+        
+      </div>
+    </div>
+  
+  
+
+      <!-- Footer -->
+      <footer class="bg-deep-slate-gray text-light-gray py-6 mt-40">
+        <div class="max-w-[90%] mx-auto mt-10">
+          <div class="grid place-items-center grid-cols-2 md:grid-cols-3 mx-auto max-w-7xl text-center">
+            <div class="mt-10">
+              <h2 class="text-lg font-semibold mb-4">Contact Us</h2>
+              <p>123 Main Street</p>
+              <p>City, State ZIP</p>
+              <p><i class="fa fa-envelope pr-2"></i> info@example.com</p>
+              <p><i class="fa fa-phone pr-2 "></i> (123) 456-7890</p>
+
+              <div class="mt-3">
+                <!-- <h2 class="text-lg font-semibold mb-4">Follow Us</h2> -->
+                <div class="flex space-x-5 justify-center text-2xl ">
+                  <a href="#" class="text-light-gray hover:text-teal">
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </svg>
+                  </a>
+                  <a href="#" class="text-light-gray hover:text-teal">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </svg>
+                  </a>
+                  <a href="#" class="text-light-gray hover:text-teal">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </svg>
+                  </a>              
+                </div>
+              </div>
+
+            </div>
+
+            <div class="mt-10">
+              <h2 class="text-lg font-semibold mb-4">Quick Links</h2>
+              <ul class="space-y-2">
+                <li><a href="index.html" class="hover:text-teal">Home</a></li>
+                <li><a href="about-us.html" class="hover:text-teal">About Us</a></li>
+                <li><a href="contact.html" class="hover:text-teal">Contact</a></li>
+                <li><a href="blog.html" class="text-light-gray hover:text-teal">Blog</a></li>
+                <li><a href="buyhouse.html" class="hover:text-teal">Properties</a></li>
+                <li><a href="#" class="hover:text-teal">Agents</a></li>
+
+
+              </ul>
+            </div>
+            
+            <div class="mt-10 col-span-1">
+              <h2 class="text-lg font-semibold mb-4">Discover listings</h2>
+              <ul class="space-y-2">
+                <li><a href="#" class="hover:pr-3 hover:text-teal">Lagos Island</a>&#8594;</li>
+                <li><a href="#" class="hover:pr-3 hover:text-teal">Lagos Mainland</a>&#8594;</li>
+                <li><a href="#" class="hover:pr-3 hover:text-teal">Abuja</a>&#8594;</li>
+                <li><a href="#" class="hover:pr-3 hover:text-teal">Ibadan</a>&#8594;</li>
+                <li><a href="#" class="hover:pr-3 hover:text-teal">Port-hacourt</a>&#8594;</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+
+        <div class="container mx-auto mt-36 text-center text-xs">
+          <p>&copy; 2023 Real Estate Company. All rights reserved.</p>
+        </div>
+      </footer>
+
+      <!-- LOGIN -->
+      <div class="login-bg">
+        <div class="popup">
+
+          <div class="login-signup-container">
+              <div class="close-btn">&times;</div>
+              <div class="user signinBx">
+                  <div class="imgBx"><img src="img/Login-Sigup/newlock1.jpg" alt=""></div>
+                  <div class="formBx">
+                      <form action="">
+                          <h2>Sign In</h2>
+                          <input type="text" placeholder="Username" autocomplete="username">
+                          <input type="password" placeholder="Password" autocomplete="current-password">
+                          <input type="submit" value="Login">
+                          <p class="signup">don't have an account? <a href="#" onclick="toggleForm()">Sign up</a></p>
+                      </form>
+                  </div>
+              </div>
+
+              <div class="user signupBx">
+                  <div class="formBx">
+                      <form action="">
+                          <h2>Create an account</h2>
+                          <input type="text" placeholder="Username">
+                          <input type="email" placeholder="Email Adress" autocomplete="email">
+                          <input type="password" placeholder="Create Password" autocomplete="new-password">
+                          <input type="password" placeholder="Confirm Password" autocomplete="new-password">
+                          <input type="submit" value="Sign Up">
+                          <p class="signup">Already have an account? <a href="#" onclick="toggleForm()">Sign in</a></p>
+                      </form>
+                  </div>
+                  <div class="imgBx"><img src="img/Login-Sigup/img6.jpg" alt=""></div>
+              </div>          
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+
+      
+      <!-- SWIPER.JS SCRIPT -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper@10.2.0/swiper-bundle.min.js"></script>
+
+      <script>
+            var mySwiper = new Swiper('.swiper-container', {
+          loop: true,
+          speed: 1000,
+          autoplay: {
+              delay: 2000,
+          },
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: 'auto',
+          coverflowEffect: {
+              rotate: 20,
+              stretch: 0,
+              depth: 200,
+              modifier: 1,
+              slideShadows: true,
+          },
+         
+          // Navigation arrows
+          navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+          },
+
+        
+
+      })
+      </script>
+
+      <!-- QUICK JS FOR FAQ DROPDOWN -->
+      <script>
+        // JavaScript to handle FAQ interactions
+        function toggleAnswer(element) {
+          const answer = element.nextElementSibling;
+          answer.classList.toggle('hidden');
+        }
+      </script>
+
+<script src="js/login.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="js/app.js"></script>
+      <!-- <script src="/build/js/skrollr.js"></script>
+      <script type="text/javascript">
+        var s = skrollr.init();
+      </script> -->
+
+
+
+</body>
+</html>

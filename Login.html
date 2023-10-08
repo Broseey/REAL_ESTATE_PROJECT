@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login-signup.css">
+</head>
+<body>
+    <section class="login-signup-form " style="backdrop-filter: blur(10px);">
+        <div class="login-signup-container">
+            <div class="user signinBx">
+                <div class="imgBx"><img src="img/Login-Sigup/door-knob_1203-3633.jpg" alt=""></div>
+                <div class="formBx">
+                    <form action="">
+                        <h2>Sign In</h2>
+                        <input type="text" placeholder="Username">
+                        <input type="password" placeholder="Password">
+                        <input type="submit" value="Login">
+                        <p class="signup">don't have an account? <a href="#" onclick="toggleForm()">Sign up</a></p>
+                    </form>
+                </div>
+            </div>
+
+            <div class="user signupBx">
+                <div class="formBx">
+                    <form action="">
+                        <h2>Create an account</h2>
+                        <input type="text" placeholder="Username">
+                        <input type="email" placeholder="Email Adress">
+                        <input type="password" placeholder="Create Password">
+                        <input type="password" placeholder="Confirm Password">
+                        <input type="submit" value="Sign Up">
+                        <p class="signup">Already have an account? <a href="#" onclick="toggleForm()">Sign in</a></p>
+                    </form>
+                </div>
+                <div class="imgBx"><img src="img/Login-Sigup/img6.jpg" alt=""></div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        function toggleForm(){
+            section = document.querySelector('.login-signup-form');
+            container = document.querySelector('.login-signup-container');
+            container.classList.toggle('form-active');
+            section.classList.toggle('form-active');
+        }
+    </script>
+</body>
+</html>

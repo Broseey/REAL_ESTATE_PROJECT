@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Real Estate Agency</title>
+  <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/mininavbar.css">
+  <link rel="stylesheet" href="css/login-popup.css">
+
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+  
+  <!-- PRELOADER -->
+  <link rel="stylesheet" href="css/preloader.css">
+  <script src="js/preloader.js"></script>
+
+  <style>
+    /* Additional styles for the Contact Us page */
+    .contact-container {
+      background-color: #F4F5F7;
+      padding: 4rem 0;
+    }
+    .contact-form {
+      background-color: #FFFFFF;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+    }
+    .contact-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: #0f231b;
+    }
+    .contact-input {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #E5E7EB;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+      color: #4A5568;
+    }
+    .contact-textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #E5E7EB;
+      border-radius: 4px;
+      resize: vertical;
+      height: 150px;
+      margin-bottom: 1.5rem;
+      color: #4A5568;
+    }
+    .contact-button {
+      background-color: teal;
+      color: #FFFFFF;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .contact-button:hover {
+      background-color:darkslategray;
+    }
+    .map-container {
+      margin-top: 2rem;
+      background-color: #f9f9f9;
+      padding: 4rem;
+    }
+    
+  </style>
+
+</head>
+<body class="bg-light-gray h-screen">
+
+  <!-- Word loader -->
+  <div class="word-loader">
+    <div class="word">Loading...</div>
+  </div>
+  
+    <!-- Navigation -->
+    <nav class="bg-teal text-charcoal p-3 justify-center items-center hidden md:flex">
+    
+      <div class="container max-w-7xl mx-auto flex justify-between items-center md:justify-between">
+         <div class="flex space-x-4 md:hidden">
+          <button id="menuButton" class="focus:outline-none">
+              <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 5h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 5h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
+              </svg>
+          </button>
+        </div>
+  
+        <a href="index.html" class="text-3xl logo-color2  styled-font flex"><img width="30" height="64" src="https://img.icons8.com/hatch/64/000000/exterior.png" alt="exterior"/><span class="styled-font logo-color">R</span>oyale</a>
+  
+        
+        <!-- <div class="flex space-x-4 md:hidden">
+          <button id="loginButton" class="focus:outline-none">
+              <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg>
+          </button>
+        </div> -->
+  
+      
+        <ul class="sidebar absolute left-0 top-0 md:static hidden md:flex items-center space-x-4 font-medium text-center w-0 md:w-fit h-full md:h-fit">
+          
+          <li class="md:hidden"><a href="#" class="text-3xl logo-color2  styled-font flex"><img width="30" height="64" src="https://img.icons8.com/hatch/64/000000/exterior.png" alt="exterior"/><span class="styled-font logo-color">R</span>oyale</a>
+  
+          <button id="closeMenuButton" class="absolute right-0 top-0"><svg class="fill-current h-8" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+          </button>
+  
+          </li>
+          <li><a href="buyhouse.html" class="nav-link hover:text-deep-slate-gray">Buy</a></li>
+          <li><a href="#" class="nav-link hover:text-deep-slate-gray">Sell</a></li>
+          <li><a href="rent.html" class="nav-link hover:text-deep-slate-gray">Rent</a></li>
+          <li><a href="#" class="nav-link hover:text-deep-slate-gray">Properties</a></li>
+          <li><a href="blog.html" class="nav-link hover:text-deep-slate-gray">Blog</a></li>
+          <li><a href="about-us.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+    
+  
+        <ul class="sidebar absolute md:static hidden md:flex">
+          <li class=""><a href="" class="underline hover:opacity-80">Advertise</a></li>
+       </ul>
+  
+        <ul class="hidden md:flex space-x-4">
+          <li><a href="#" onclick="showLogin(this)" class="nav-link">Log in</a></li>
+          <li><a href="#" onclick="showLogin(this)" class="bg-white text-black p-2 px-4 font-medium rounded-2xl hover:opacity-95">Sign Up</a></li>
+        </ul>
+  
+        
+      </div>
+    </nav>
+    <!-- NAV FOR SMALL DEVICE -->
+    <div class="relative w-full p-3 h-fit bg-teal md:hidden flex justify-between items-center flex-row">
+      <div class="menubtn">
+        <svg class="text-[1.2rem]" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+      </div>
+  
+      <a href="index.html" class="text-3xl logo-color2  styled-font flex"><img width="30" height="64" src="https://img.icons8.com/hatch/64/000000/exterior.png" alt="exterior"/><span class="styled-font logo-color">R</span>oyale</a>
+  
+      <div><a href="#" onclick="showLogin(this)"><svg class="text-[1.2rem]" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM504 312V248H440c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V136c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H552v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></a>
+      </div>
+      <section class="smallernav md:hidden z-10 fixed">
+        <h2 class='styled-font'>Royale</h2>
+        <div class="close">
+          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+        </div>
+        <ul class="text-center">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="buyhouse.html">Properties</a></li>
+          <li><a href="buyhouse.html">Buy</a></li>
+          <li><a href="about-us.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </section>
+  
+    
+  
+      
+    </div>
+
+ <!-- Contact content -->
+ <div class="contact-container relative z-[1]">
+    <div class="absolute bg-sandy-brown bg-blend-overlay bg-opacity-60 w-full h-80 top-0 z-[-1] bg-[url(/build/img/contactus/happy-call-2.jpg)] bg-cover  bg-center md:bg-left scale-x-[1]">
+        
+    </div>
+    <div class="container mx-auto z-10">
+      <div class="text-center">
+        <h1 class="text-3xl font-semibold mb-4 text-deep-slate-gray">Contact Us</h1>
+        <p class="text-white"><span class="md:">Feel free to get in touch with us.</span> <span class=""> We're here to help you.</span></p>
+      </div>
+      <div class="flex justify-center mt-8 mb-32">
+        <div class="w-full sm:3/5 md:w-3/5">
+          <div class="contact-form w-[90%] md:w-auto mx-auto">
+            <h2 class="contact-title">Send us a Message</h2>
+            <form>
+              <input type="text" class="contact-input" placeholder="Your Name">
+              <input type="email" class="contact-input" placeholder="Your Email">
+              <textarea class="contact-textarea" placeholder="Your Message"></textarea>
+              <button class="contact-button" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="text-center map-container">
+        <h2 class="contact-title text-3xl">Our Location</h2>
+        <!-- Embedded map using an iframe -->
+        <div class="mt-12 mx-auto w-80% flex justify-center flex-col md:flex-row space-y-4 md:space-x-4">
+        <div class="location-container">
+        <span class="text-5xl"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+        <div class="location-details">
+          <h2 class="contact-title">Head Office Location</h2>
+          <p>419 Main Street, off Buju Lounge Rd, Ikoyi Lagos</p>
+          <p>Contact: royale@gmail.com</p>
+        </div>
+      </div>
+      <div class="mapouter mx-auto md:w-[600px] md:h-[400px] sm:w-[400px] sm:h-[500px] w-full h-full border-4"><div class="gmap_canvas"><iframe class="md:w-[600px] md:h-[400px] sm:w-[400px] sm:h-[500px] w-full h-full" src="https://maps.google.com/maps?q=ikoyi%20gra%20banaa%20island&amp;t=k&amp;z=11&amp;ie=UTF8&amp;iwloc=&amp;output=embed" id="gmap_canvas" frameborder="0" scrolling="no"></iframe><style>.mapouter{position:relative;text-align:center}</style><style>.gmap_canvas{overflow:hidden;background:none!important;}</style></div></div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+<!-- Footer -->
+<footer class="bg-deep-slate-gray text-light-gray py-6 mt-40">
+  <div class="max-w-[90%] mx-auto mt-10">
+    <div class="grid place-items-center grid-cols-2 md:grid-cols-3 mx-auto max-w-7xl text-center">
+      <div class="mt-10">
+        <h2 class="text-lg font-semibold mb-4">Contact Us</h2>
+        <p>123 Main Street</p>
+        <p>City, State ZIP</p>
+        <p><i class="fa fa-envelope pr-2"></i> info@example.com</p>
+        <p><i class="fa fa-phone pr-2 "></i> (123) 456-7890</p>
+
+        <div class="mt-3">
+          <!-- <h2 class="text-lg font-semibold mb-4">Follow Us</h2> -->
+          <div class="flex space-x-5 justify-center text-2xl ">
+            <a href="#" class="text-light-gray hover:text-teal">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </svg>
+            </a>
+            <a href="#" class="text-light-gray hover:text-teal">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </svg>
+            </a>
+            <a href="#" class="text-light-gray hover:text-teal">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </svg>
+            </a>              
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-10">
+        <h2 class="text-lg font-semibold mb-4">Quick Links</h2>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="hover:text-teal">Home</a></li>
+          <li><a href="about-us.html" class="hover:text-teal">About Us</a></li>
+          <li><a href="contact.html" class="hover:text-teal">Contact</a></li>
+          <li><a href="blog.html" class="text-light-gray hover:text-teal">Blog</a></li>
+          <li><a href="buyhouse.html" class="hover:text-teal">Properties</a></li>
+          <li><a href="#" class="hover:text-teal">Agents</a></li>
+        </ul>
+      </div>
+      
+      <div class="mt-10 col-span-1">
+        <h2 class="text-lg font-semibold mb-4">Discover listings</h2>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:pr-3 hover:text-teal">Lagos Island</a>&#8594;</li>
+          <li><a href="#" class="hover:pr-3 hover:text-teal">Lagos Mainland</a>&#8594;</li>
+          <li><a href="#" class="hover:pr-3 hover:text-teal">Abuja</a>&#8594;</li>
+          <li><a href="#" class="hover:pr-3 hover:text-teal">Ibadan</a>&#8594;</li>
+          <li><a href="#" class="hover:pr-3 hover:text-teal">Port-hacourt</a>&#8594;</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="container mx-auto mt-36 text-center text-xs">
+    <p>&copy; 2023 Real Estate Company. All rights reserved.</p>
+  </div>
+  </footer>
+        <!-- LOGIN/ SIGNUP PAGE -->
+        <div class="login-bg z-50">
+          <div class="popup">
+      
+            <div class="login-signup-container">
+                <div class="close-btn">&times;</div>
+                <div class="user signinBx">
+                    <div class="imgBx"><img src="img/Login-Sigup/newlock1.jpg" alt=""></div>
+                    <div class="formBx">
+                        <form action="">
+                            <h2>Sign In</h2>
+                            <input type="text" placeholder="Username" autocomplete="username">
+                            <input type="password" placeholder="Password" autocomplete="current-password">
+                            <input type="submit" value="Login">
+                            <p class="signup">don't have an account? <a href="#" onclick="toggleForm()">Sign up</a></p>
+                        </form>
+                    </div>
+                </div>
+      
+                <div class="user signupBx">
+                    <div class="formBx">
+                        <form action="">
+                            <h2>Create an account</h2>
+                            <input type="text" placeholder="Username">
+                            <input type="email" placeholder="Email Adress" autocomplete="email">
+                            <input type="password" placeholder="Create Password" autocomplete="new-password">
+                            <input type="password" placeholder="Confirm Password" autocomplete="new-password">
+                            <input type="submit" value="Sign Up">
+                            <p class="signup">Already have an account? <a href="#" onclick="toggleForm()">Sign in</a></p>
+                        </form>
+                    </div>
+                    <div class="imgBx"><img src="img/Login-Sigup/img6.jpg" alt=""></div>
+                </div>          
+            </div>
+      
+          </div>
+        </div>
+  
+  <script src="js/login.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
+<!-- <i class="fa fa-envelope-o" aria-hidden="true"></i> 
+    <i class="fa fa-phone" aria-hidden="true"></i>
+    <i class="fa fa-bars" aria-hidden="true"></i>
+
+-->
