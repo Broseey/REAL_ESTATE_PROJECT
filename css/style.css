@@ -1091,6 +1091,10 @@ video {
   background-image: url(../img/contactus/happy-call-2.jpg);
 }
 
+.bg-\[url\(\.\/img\/happy-family-background-image\.jpg\)\] {
+  background-image: url(./img/happy-family-background-image.jpg);
+}
+
 .bg-cover {
   background-size: cover;
 }
