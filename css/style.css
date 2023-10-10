@@ -1067,6 +1067,14 @@ video {
   --tw-bg-opacity: 0.8;
 }
 
+.bg-\[url\(\.\.\/img\/happy-family-background-image\.jpg\)\] {
+  background-image: url(../img/happy-family-background-image.jpg);
+}
+
+.bg-\[url\(\/REAL_ESTATE_PROJECT\/img\/contactus\/happy-call-2\.jpg\)\] {
+  background-image: url(/REAL_ESTATE_PROJECT/img/contactus/happy-call-2.jpg);
+}
+
 .bg-\[url\(\/build\/img\)\] {
   background-image: url(/build/img);
 }
@@ -1075,12 +1083,12 @@ video {
   background-image: url(/build/img/);
 }
 
-.bg-\[url\(\/build\/img\/contactus\/happy-call-2\.jpg\)\] {
-  background-image: url(/build/img/contactus/happy-call-2.jpg);
+.bg-\[url\(\/img\/contactus\/happy-call-2\.jpg\)\] {
+  background-image: url(/img/contactus/happy-call-2.jpg);
 }
 
-.bg-\[url\(\/build\/img\/happy-family-background-image\.jpg\)\] {
-  background-image: url(/build/img/happy-family-background-image.jpg);
+.bg-\[url\(\.\.\/img\/contactus\/happy-call-2\.jpg\)\] {
+  background-image: url(../img/contactus/happy-call-2.jpg);
 }
 
 .bg-cover {
@@ -1300,10 +1308,6 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-\[\] {
-  color: ;
-}
-
 .underline {
   text-decoration-line: underline;
 }
@@ -1380,10 +1384,6 @@ video {
 
 .duration-500 {
   transition-duration: 500ms;
-}
-
-.ease-in {
-  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
 html{
@@ -1547,20 +1547,6 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgb(0 128 128 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-white:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-black:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-opacity-80:hover {
-  --tw-bg-opacity: 0.8;
-}
-
 .hover\:pr-3:hover {
   padding-right: 0.75rem;
 }
@@ -1578,11 +1564,6 @@ h1, h2, h3, h4, h5, h6 {
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.hover\:text-black:hover {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .hover\:opacity-80:hover {
@@ -1620,11 +1601,6 @@ h1, h2, h3, h4, h5, h6 {
 .group:hover .group-hover\:text-deep-slate-gray {
   --tw-text-opacity: 1;
   color: rgb(47 79 79 / var(--tw-text-opacity));
-}
-
-.group:hover .group-hover\:text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 @media (min-width: 640px) {
